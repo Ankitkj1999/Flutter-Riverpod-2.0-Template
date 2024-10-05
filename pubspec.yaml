@@ -57,7 +57,7 @@ dev_dependencies:
   flutter_lints: ^4.0.0
   # The "build_runner" package provides a way to generate files using Dart code
   build_runner: ^2.4.5
-  json_serializable: ^6.7.0
+  json_serializable: ^6.8.0
   riverpod_generator: ^2.2.3
   riverpod_lint: ^2.3.2
   retrofit_generator: ^8.0.3
