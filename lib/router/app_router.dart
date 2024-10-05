@@ -6,6 +6,7 @@ import 'package:injectable/injectable.dart';
 
 import '../data/getstore/get_store_helper.dart';
 import '../di/components/service_locator.dart';
+import '../features/copuntiedScreen.dart';
 import '../features/home/home.dart';
 import '../features/info/info_screen.dart';
 import 'fade_extension.dart';
@@ -16,6 +17,7 @@ enum SGRoute {
   home,
   firstScreen,
   secondScreen,
+  countriesScreen,
   login,
   register,
   forgotPassword,
@@ -41,6 +43,11 @@ class SGGoRouter {
         path: SGRoute.secondScreen.route,
         builder: (BuildContext context, GoRouterState state) =>
             const SecondScreen(),
+      ).fade(),
+      GoRoute(
+        path: SGRoute.countriesScreen.route,
+        builder: (BuildContext context, GoRouterState state) =>
+            const CountriesScreen(),
       ).fade(),
     ],
   );

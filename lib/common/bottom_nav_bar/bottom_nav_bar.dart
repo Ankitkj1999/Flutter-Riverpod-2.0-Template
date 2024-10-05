@@ -13,11 +13,9 @@ class BottomNavBar extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    // ignore: prefer_final_locals, always_specify_types
-    var nav = ref.watch(bottomNavBarLogicProvider);
+    final nav = ref.watch(bottomNavBarLogicProvider);
 
     return Padding(
-      /// Padding
       padding: const EdgeInsets.only(bottom: 8),
       child: WaterDropNavBar(
         key: const Key('bottom_nav_bar'),
@@ -27,14 +25,17 @@ class BottomNavBar extends ConsumerWidget {
         onItemSelected: (int index) {
           ref.read(bottomNavBarLogicProvider.notifier).setNavIndex(index);
 
-          /// If you have more than 2 screens, you have to implement a switch case Example:
-          /// case 0:
-          ///  context.go(SGRoute.firstScreen.route);
-          /// case 1:
-          ///   context.go(SGRoute.secondScreen.route);
-          context.go(nav.navIndex == 1
-              ? SGRoute.firstScreen.route
-              : SGRoute.secondScreen.route);
+          switch (index) {
+            case 0:
+              context.go(SGRoute.firstScreen.route);
+              break;
+            case 1:
+              context.go(SGRoute.secondScreen.route);
+              break;
+            case 2:
+              context.go(SGRoute.countriesScreen.route);
+              break;
+          }
         },
         barItems: <BarItem>[
           BarItem(
@@ -44,6 +45,10 @@ class BottomNavBar extends ConsumerWidget {
           BarItem(
             filledIcon: Ionicons.information_circle,
             outlinedIcon: Ionicons.information_circle_outline,
+          ),
+          BarItem(
+            filledIcon: Ionicons.globe,
+            outlinedIcon: Ionicons.globe_outline,
           ),
         ],
       ),
