@@ -44,14 +44,14 @@ class HomeScreen extends ConsumerWidget {
                     leadingIcon: Icon(Ionicons.logo_github,
                         color: context.colorScheme.primary),
                     title: 'Github',
-                    url: Uri.parse('https://github.com/erengun'),
+                    url: Uri.parse('https://github.com/'),
                   );
                 case 1:
                   return SocialTile(
                     leadingIcon: Icon(Ionicons.logo_linkedin,
                         color: context.colorScheme.primary),
                     title: 'Linkedin',
-                    url: Uri.parse('https://www.linkedin.com/in/erengun'),
+                    url: Uri.parse('https://www.linkedin.com/in/'),
                   );
                 case 2:
                   return SocialTile(
@@ -65,7 +65,7 @@ class HomeScreen extends ConsumerWidget {
                     leadingIcon: Icon(Ionicons.globe_outline,
                         color: context.colorScheme.primary),
                     title: 'Website',
-                    url: Uri.parse('https://erengun.dev'),
+                    url: Uri.parse('https://ankit-kumar-weblink.web.app/'),
                   );
                 default:
                   return const SizedBox.shrink();
