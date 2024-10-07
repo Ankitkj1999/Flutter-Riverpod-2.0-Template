@@ -97,7 +97,7 @@ Define routes in `lib/config/router/app_router.dart` using Go Router.
 ### Light Theme 
 | Home | Info |
 |------|------|
-| ![Home Light](./assets/img/home_light.jpg) | ![Info Light](./assets/img/info_light.jpg) |
+| ![Home Light](./assets/img/home_light_img.jpg) | ![Info Light](./assets/img/info_light.jpg) |
 
 ### Dark Theme
 | Home | Info |
