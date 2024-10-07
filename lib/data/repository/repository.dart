@@ -1,22 +1,20 @@
-import 'package:logger/logger.dart';
 import '../cache/cache_manager.dart';
 import '../interseptor/graphQL_Inpector.dart';
 import '../models/country.dart';
 
 
+
 class CountryRepository {
   final GraphQLInterceptor _graphQLInterceptor;
   final CacheManager _cacheManager;
-  final Logger _logger;
 
-  CountryRepository(this._graphQLInterceptor, this._cacheManager, {Logger? logger})
-      : _logger = logger ?? Logger();
+  CountryRepository(this._graphQLInterceptor, this._cacheManager);
 
   Future<List<Country>> getCountries() async {
     try {
       final cachedCountries = await _cacheManager.getCachedCountries();
       if (cachedCountries.isNotEmpty) {
-        _logger.i('Returning cached countries');
+        print('Returning cached countries');
         return cachedCountries;
       }
 
@@ -39,7 +37,7 @@ class CountryRepository {
       await _cacheManager.saveCountries(countries);
       return countries;
     } catch (e) {
-      _logger.e('Error fetching countries: $e');
+      print('Error fetching countries: $e');
       rethrow;
     }
   }
@@ -66,7 +64,7 @@ class CountryRepository {
       }
       return Country.fromJson(countryData);
     } catch (e) {
-      _logger.e('Error fetching country by code: $e');
+      print('Error fetching country by code: $e');
       rethrow;
     }
   }

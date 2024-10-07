@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:graphql_flutter/graphql_flutter.dart';
+import 'package:logger/logger.dart';
 
-import '../../common/app_bar_gone.dart';
-import '../../common/bottom_nav_bar/bottom_nav_bar.dart';
+import '../../../common/app_bar_gone.dart';
+import '../../../common/bottom_nav_bar/bottom_nav_bar.dart';
 
 class Country {
   final String code;
@@ -31,11 +32,13 @@ class CountriesScreen extends ConsumerStatefulWidget {
 class _CountriesScreenState extends ConsumerState<CountriesScreen> {
   List<Country> countries = [];
   bool isLoading = false;
-
+  final logger = Logger();
   @override
   void initState() {
     super.initState();
     fetchCountries();
+    // logger initialized in main.dart
+    logger.d('CountriesScreen initialized');
   }
 
   Future<void> fetchCountries() async {
@@ -100,3 +103,5 @@ class _CountriesScreenState extends ConsumerState<CountriesScreen> {
     );
   }
 }
+
+// TODO: Impletent the network print interceptor
