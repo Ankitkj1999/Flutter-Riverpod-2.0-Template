@@ -102,16 +102,16 @@ Define routes in `lib/config/router/app_router.dart` using Go Router.
 ### Dark Theme
 | Home | Info |
 |------|------|
-| ![Home Dark](./assets/img/home_dark.jpg) | ![Info Dark](./assets/img/info_dark.jpg) |
+| ![Home Dark](./assets/img/home_dark_img.jpg) | ![Info Dark](./assets/img/info_dark.jpg) |
 
 ### Web
 | Home Light | Info Light |
 |------------|------------|
-| ![Home Light Web](./assets/img/home_light_web.jpg) | ![Info Light Web](./assets/img/info_light_web.jpg) |
+| ![Home Light Web](./assets/img/home_light_web_img.jpg) | ![Info Light Web](./assets/img/info_light_web.jpg) |
 
 | Home Dark | Info Dark |
 |-----------|-----------|
-| ![Home Dark Web](./assets/img/home_dark_web.jpg) | ![Info Dark Web](./assets/img/info_dark_web.jpg) |
+| ![Home Dark Web](./assets/img/home_dark_web_img.jpg) | ![Info Dark Web](./assets/img/info_dark_web.jpg) |
 
 </details>
 
