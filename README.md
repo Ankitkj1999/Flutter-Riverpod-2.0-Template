@@ -150,6 +150,9 @@ Use Hive or another storage solution in conjunction with your state management. 
 - [x] Integrate Hive for local storage
 - [x] Add Easy Localization support
 - [x] Create a feature-first folder structure
+- [x] Create another separate branch for graphQL
+- [x] Implemented graphQL interceptor layer.
+- [ ] Implemented rest interceptor layer using dio.
 - [ ] Write tests for logic classes
 - [ ] Add more examples for API call handling
 - [ ] Expand documentation and comments
